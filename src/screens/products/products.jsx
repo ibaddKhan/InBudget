@@ -2,10 +2,10 @@ import React from 'react'
 import Card from "../../components/card";
 import { useEffect,useState } from "react"
 import { Link } from 'react-router-dom';
-
-
-
 import axios from 'axios';
+
+
+
 const Products = () => {
   const [dataArr, setDataArr] = useState([]);
   useEffect(() => {
