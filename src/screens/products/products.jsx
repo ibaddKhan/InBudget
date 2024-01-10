@@ -1,15 +1,13 @@
 import React from 'react'
 import Card from "../../components/card";
 import { useEffect,useState } from "react"
-import { useParams } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 
 
 import axios from 'axios';
 const Products = () => {
   const [dataArr, setDataArr] = useState([]);
-  let params = useParams();
-  console.log(params);
   useEffect(() => {
     axios.get('https://fakestoreapi.com/products').then((res) => {
       setDataArr(res.data)
@@ -22,7 +20,7 @@ const Products = () => {
     <>
       <div className="main-div">
       {dataArr.length > 0 ? dataArr.map((item,index)=>{
-            return <Card key={index} title={item.title} description={item.description} src={item.image} price={item.price} id={item.id}/>
+            return <Card key={index} title={item.title} description={item.description} src={item.image} price={item.price} id={item.id} />
         }): <h1>Loading...</h1>}
 
       </div>
@@ -31,4 +29,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default Products 

@@ -18,7 +18,7 @@ export default function ButtonAppBar() {
           <Link  to='/'>
           <Button  variant="soft">Home</Button>
           </Link>
-          <Link to='products/a'>
+          <Link to='products'>
           <Button variant="soft">Products</Button>
           </Link>
           <Link to='About'>

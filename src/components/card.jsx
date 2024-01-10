@@ -5,8 +5,17 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Link ,useNavigate } from 'react-router-dom';
 
 export default function Cardd(props) {
+  
+  let nav = useNavigate()
+  function showSingleProduct() {
+    console.log("Clicked at ",props.id);
+    nav(`/Singleproducts/${props.id}`)
+}
+  
+  let desc  = props.description.slice(0,60)
   return (
     
     <Card sx={{ maxWidth: 345 }}>
@@ -19,15 +28,14 @@ export default function Cardd(props) {
         <Typography gutterBottom variant="h5" component="div">
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Typography gutterBottom variant="h5" align='right'  fontWeight={32} component="div">
+          {props.price}$
+        </Typography>
+        <Typography variant="body2"  color="text.secondary">{desc}...
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
+    <Button size="large" onClick={showSingleProduct}>Shop now</Button>
+
     </Card>
   );
 }
