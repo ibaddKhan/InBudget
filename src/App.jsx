@@ -1,11 +1,10 @@
 import React from 'react';
-import Button from '@mui/material/Button';
+import  Routers  from './config/router-config/routes';
 
 const App = () => {
   return (
-    <Button variant="contained" color="primary">
-      Click me
-    </Button>
+    
+    <Routers/>
   );
 };
 
