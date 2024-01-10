@@ -13,12 +13,12 @@ export default function ButtonAppBar() {
         <Toolbar>
          
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
+          InBudget
           </Typography>
           <Link  to='/'>
           <Button  variant="soft">Home</Button>
           </Link>
-          <Link to='products'>
+          <Link to='products/a'>
           <Button variant="soft">Products</Button>
           </Link>
           <Link to='About'>

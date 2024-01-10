@@ -7,13 +7,13 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
 export default function Cardd(props) {
-    console.log(props);
   return (
+    
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 140 }}
-        image={props.image}
-        title="green iguana"
+        sx={{ height: 300 }}
+        image={props.src}
+        title="Fake Items"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

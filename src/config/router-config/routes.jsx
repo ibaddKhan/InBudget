@@ -14,6 +14,7 @@ const Routers = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='about' element={<About />} />
                     <Route path='products' element={<Products />} />
+                    <Route path='Singleproducts/:id' element={<Singleproducts />} />
                 </Routes>
                 
             </BrowserRouter>
