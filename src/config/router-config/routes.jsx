@@ -15,7 +15,6 @@ const Routers = () => {
                     <Route path='about' element={<About />} />
                     <Route path='products' element={<Products />} />
                 </Routes>
-                <Card/>
                 
             </BrowserRouter>
         </>
